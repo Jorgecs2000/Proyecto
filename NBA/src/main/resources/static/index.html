@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title><meta charset="ISO-8859-1">
+	<meta name="autor" content="Jorge Calvo Soria">
+	<title>PRAC2</title>
+  <link rel="stylesheet" type="text/css" href="./css/STYLE.css" media="screen" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<header class="NBA-header py-4" id="TOP">
+	<div class ="row header flex no-wrap justify-content-between align-items-center">
+	  <div class="col-12 text-center">
+	  	<image src="https://www.pinclipart.com/picdir/big/522-5223756_nba-logo-white-png-clipart.png" width="200" heigth="100" align=top> </image>
+	  </div>
+	</div>
+	</header>
+      <div class="login col-2 p-5 text center">
+		 <form class="needs-validation" name="login" id= "search-login" method="post" onsubmit= "return loginForm()">
+		  	<div>User:
+  			<input required minlength="5" type="text" name="user" id="user"></div>
+  			<br></br>
+  	  		<div>Password:
+  			<input required minlength="2" type="password" name="password" id="password"></div>
+  			<br></br>
+  			<button type="submit">Login</button>
+	 	</form>
+ 	 </div>
+  </div>
+<script type="text/javascript" src="./js/login.js"></script>
+</body>
+</html>
