@@ -1,15 +1,16 @@
 DROP TABLE players;
+DROP TABLE userdatas;
 
-CREATE TABLE IF NOT EXISTS userdatas (
-email VARCHAR(100) PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS userdatas ( 
+id INT AUTO_INCREMENT PRIMARY KEY,
+userid VARCHAR(100),
+password VARCHAR(100),
+email VARCHAR(100),
 phone VARCHAR(100),
-birth VARCHAR(1024),
 favourite_team VARCHAR(100),
 favourite_player VARCHAR(100));
 
-CREATE TABLE IF NOT EXISTS users (
-user VARCHAR(100) PRIMARY KEY,
-password VARCHAR(100));
+INSERT INTO userdatas (userid,password,email,phone,favourite_team,favourite_player) VALUES ('demo','demo','demo@gmail.com','111111111','luka doncic','Dallas Mavericks');
 
 
 CREATE TABLE IF NOT EXISTS players(

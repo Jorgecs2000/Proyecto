@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Table("users")
 public class User {
 		@NotNull 
-		@Size(min = 5, max = 12)
+		@Size(min = 3, max = 12)
 		@Id
 		private String user;
 		@NotBlank

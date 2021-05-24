@@ -9,7 +9,7 @@ import com.project.NBA.model.UserData;
 
 public interface UserRepository extends CrudRepository<UserData,String> {
 	
-	@Query("SELECT * FROM userdatas WHERE userid LIKE :userid LIMIT 1")
+	@Query("SELECT * FROM userdatas WHERE userid = userid")
 	UserData findByUserid(@Param("userid") String userid);
 
 }
