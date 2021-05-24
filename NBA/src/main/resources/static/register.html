@@ -18,19 +18,65 @@
 	  </div>
 	</div>
 	</header>
-      <div class="login col-2 p-5 text center">
+      <div class="register text center">
 		 <form class="needs-validation" name="login" id= "search-login" method="post" onsubmit= "return loginForm()">
-		  	<div>User:
-  			<input required minlength="5" type="text" name="user" id="input1"></div>
-  			<br></br>
-  	  		<div>Password:
-  			<input required minlength="2" type="password" name="password" id="input2"></div>
-  			<br></br>
-  			<button type="submit">Login</button>
-  			<a href="/registerView.html">Register</a>
+		  	<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="user" id="input1" type="user" class="form-control" placeholder="User">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="password"  id="input2" type="password" class="form-control" placeholder="Password">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  	<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="email" id="input3" type="email" class="form-control" placeholder="Email">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="phone" id="input4" type="phone" class="form-control" placeholder="Phone">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  		<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="favourite_team" id="input5" type="favourite_team" class="form-control" placeholder="Favourite Team">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="favourite_player" id="input6" type="favourite_player" class="form-control" placeholder="Favourite Player">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  	<div class="form-footer">
+               <a href="/login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+            </div>
 	 	</form>
  	 </div>
   </div>
-<script type="text/javascript" src="./js/login.js"></script>
+<script type="text/javascript" src="./js/register.js"></script>
 </body>
 </html>

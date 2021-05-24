@@ -13,8 +13,7 @@ function validateForm() {
         var inputValue4 = document.getElementById("input4").value;
 		var inputValue5 = document.getElementById("input5").value;	
 		var inputValue6 = document.getElementById("input6").value;	
-		var inputValue7 = document.getElementById("input7").value;	
-        const data = { userid: inputValue1, password: inputValue2, email: inputValue3, phone: inputValue4, birth: inputValue5, favourite_team: inputValue6, favourite_player: inputValue7};
+        const data = { userid: inputValue1, password: inputValue2, email: inputValue3, phone: inputValue4, favourite_team: inputValue5, favourite_player: inputValue6};
         const address = '/api/users/register';
         fetch(address, {
             method: 'POST',

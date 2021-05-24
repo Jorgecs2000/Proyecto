@@ -16,3 +16,8 @@
 	justify-content: center;
 	margin-left: 43%;
 }
+.register
+{
+	display:flex;
+	justify-content: center;
+}
