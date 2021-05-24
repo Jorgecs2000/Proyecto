@@ -28,7 +28,7 @@ function validateForm() {
           		if(response.status == 200){
             		console.log("Authenticated");
             		alert("Registrado Correctamente");
-            		document.location.href="home.html";
+            		document.location.href="index.html";
           		} else {
             	alert("Usuario y contraseña no valido");
           }

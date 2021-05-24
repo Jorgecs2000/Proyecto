@@ -9,7 +9,7 @@ var jugadores=[];
   searchForm.addEventListener("submit", function(event){
     event.preventDefault();  
  
-fetch(`http://localhost:8080/myapplication/api/home/players?player=${document.getElementById("jugador").value}`,{
+fetch(`http://localhost:8080/api/home/players?player=${document.getElementById("jugador").value}`,{
   headers:{
    'Content-type' : 'application/json',
     'Accept': 'application/json',

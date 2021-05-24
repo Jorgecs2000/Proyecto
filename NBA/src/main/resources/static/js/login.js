@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function(event) {
 		var form = document.getElementById("myform");
 		form.addEventListener("submit", function(e) {
@@ -9,8 +10,8 @@ function validateForm() {
     try {
         var inputValue1 = document.getElementById("input1").value;
         var inputValue2 = document.getElementById("input2").value;
-        const data = { userid: inputValue1, password: inputValue2 };
-        const address = '/api/users/login';
+        const data = { user: inputValue1, password: inputValue2 };
+        const address = 'api/users/login';
         fetch(address, {
             method: 'POST',
             headers: {
