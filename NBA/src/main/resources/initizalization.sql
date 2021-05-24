@@ -1,3 +1,5 @@
+DROP TABLE players;
+
 CREATE TABLE IF NOT EXISTS userdatas (
 email VARCHAR(100) PRIMARY KEY,
 phone VARCHAR(100),
