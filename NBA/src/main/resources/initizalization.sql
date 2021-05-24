@@ -13,6 +13,7 @@ favourite_player VARCHAR(100));
 INSERT INTO userdatas (userid,password,email,phone,favourite_team,favourite_player) VALUES ('demo','demo','demo@gmail.com','111111111','Dallas Mavericks','Luka Doncic');
 INSERT INTO userdatas (userid,password,email,phone,favourite_team,favourite_player) VALUES ('demo2','demo2','demo2@gmail.com','222222222','Lakers','Lebron');
 INSERT INTO userdatas (userid,password,email,phone,favourite_team,favourite_player) VALUES ('jorge','jorge','jorge@gmail.com','333333333','Celtics','Tatum');
+INSERT INTO userdatas (userid,password,email,phone,favourite_team,favourite_player) VALUES ('javier','javier','javier@gmail.com','4444444','Celtics','Tatum');
 
 CREATE TABLE IF NOT EXISTS players(
 id INT AUTO_INCREMENT PRIMARY KEY,
