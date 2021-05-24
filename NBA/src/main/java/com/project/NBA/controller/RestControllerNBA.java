@@ -22,7 +22,6 @@ import com.project.NBA.model.User;
 import com.project.NBA.service.NBAservice;
 import com.project.NBA.service.impl.ContactService;
 
-import com.project.NBA.service.impl.UserService;
 
 @CrossOrigin(origins="null")
 @RestController
@@ -51,25 +50,6 @@ public class RestControllerNBA {
 
 	
 
-	@PostMapping(path = "/login")
-    public ResponseEntity<String> login(
-            @Valid @RequestBody User usuario,
-            BindingResult bindingResult) {
-
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>("{\"result\" : \"KO\"}", HttpStatus.BAD_REQUEST);
-        }
-
-        for(User u: UserService.getUsers())
-        {
-            if((u.getUser().equals(usuario.getUser())) &&
-                    (u.getPassword().equals(usuario.getPassword())))
-            {
-                return new ResponseEntity<>("{\"result\" : \"OK\"}", HttpStatus.OK);
-            }
-        }
-        return new ResponseEntity<>("{\"result\" : \"KO\"}", HttpStatus.UNAUTHORIZED);
-    }
 	
 	@PostMapping(path = "/contact")
     public ResponseEntity<String> contact(
