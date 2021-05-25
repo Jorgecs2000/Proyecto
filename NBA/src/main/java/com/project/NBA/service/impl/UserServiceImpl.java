@@ -37,6 +37,12 @@ public class UserServiceImpl implements UserService {
 		return usuario;
 		
 	}
+
+	@Override
+	public UserData update(UserData user) {
+		userRepository.updateByUserId(user.getUserid());
+		return user;
+	}
 	
 	
 

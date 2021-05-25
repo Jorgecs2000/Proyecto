@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title><meta charset="ISO-8859-1">
+	<meta name="autor" content="Jorge Calvo Soria">
+	<title>PRAC2</title>
+  <link rel="stylesheet" type="text/css" href="./css/STYLE.css" media="screen" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<header class="NBA-header py-4" id="TOP">
+	<div class ="row header flex no-wrap justify-content-between align-items-center">
+	  <div class="col-12 text-center">
+	  	<image src="https://www.pinclipart.com/picdir/big/522-5223756_nba-logo-white-png-clipart.png" width="200" heigth="100" align=top> </image>
+	  </div>
+	</div>
+	</header>
+      <div class="register text center">
+		 <form class="needs-validation" name="register" id= "myform">
+		  	<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="user" id="input1" type="user" class="form-control" placeholder="User">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="password"  id="input2" type="password" class="form-control" placeholder="Password">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  	<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="email" id="input3" type="email" class="form-control" placeholder="Email">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="phone" id="input4" type="phone" class="form-control" placeholder="Phone">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  		<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="favourite_team" id="input5" type="favourite_team" class="form-control" placeholder="Favourite Team">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="favourite_player" id="input6" type="favourite_player" class="form-control" placeholder="Favourite Player">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  	<div >
+               <button type="submit">Sign UP</button>
+             </div>
+	 	</form>
+ 	 </div>
+  </div>
+<script type="text/javascript" src="./js/actualizarDatos.js"></script>
+</body>
+</html>

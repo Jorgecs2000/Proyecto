@@ -11,5 +11,8 @@ public interface UserRepository extends CrudRepository<UserData,String> {
 	
 	@Query("SELECT * FROM userdatas WHERE userid =:userid")
 	UserData findByUserid(@Param("userid") String userid);
+	
+	@Query("UPDATE * FROM userdatas WHERE userid =:userid")
+	void updateByUserId(@Param("userid") String userid);
 
 }

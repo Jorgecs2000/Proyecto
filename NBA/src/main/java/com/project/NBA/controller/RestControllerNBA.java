@@ -17,8 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.NBA.model.Contact;
 import com.project.NBA.model.PlayerSearch;
-
-import com.project.NBA.model.User;
+import com.project.NBA.model.Quinteto;
 import com.project.NBA.service.NBAservice;
 import com.project.NBA.service.impl.ContactService;
 
@@ -71,7 +70,18 @@ public class RestControllerNBA {
     }
 	
 	
-	
+	@GetMapping("/quinteto")
+	public ResponseEntity<Quinteto> search(@RequestParam("player1") String player1, @RequestParam("player2") String player2, @RequestParam("player3") String player3, 
+														@RequestParam("player4") String player4, @RequestParam("player5") String player5){
+		Quinteto quinteto = nba.getQuinteto(player1, player2, player3, player4, player5);
+		
+		if(quinteto != null) {
+			return new ResponseEntity<Quinteto>(quinteto, HttpStatus.OK);
+		}else {
+			return new ResponseEntity<Quinteto>(HttpStatus.BAD_REQUEST);
+		}
+		
+	}
 	
 	
 	

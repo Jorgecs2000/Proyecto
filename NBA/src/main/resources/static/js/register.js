@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		return validateForm();
 	});
 });
-//
-//
+
 function validateForm() {
     try {
         var inputValue1 = document.getElementById("input1").value;

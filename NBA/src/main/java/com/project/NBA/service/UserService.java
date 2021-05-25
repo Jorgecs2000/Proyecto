@@ -8,5 +8,7 @@ public interface UserService {
 	public UserData login(User loginreq);
 	
 	public UserData register(UserData usuario);
+	
+	public UserData update(UserData user);
 
 }
