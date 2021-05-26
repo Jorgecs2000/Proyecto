@@ -48,10 +48,16 @@ public class UserController {
 	}
 	
 	@PutMapping("/update")
-	public ResponseEntity<UserData> actualizar(@RequestBody UserData user){
+	public ResponseEntity<UserData> actualizar(@RequestParam("userid") String userid, @RequestParam("password") String password, @RequestParam("password_repe") String password_repe){
 		
-		UserData u = userService.update(user);
-		return new ResponseEntity<>(u,HttpStatus.OK);
+		boolean r =userService.update(userid,password,password_repe);
+		if(r) {
+			return new ResponseEntity<>(HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+		
+		
 	}
 		
 }

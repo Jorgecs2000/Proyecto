@@ -39,9 +39,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public UserData update(UserData user) {
-		userRepository.updateByUserId(user.getUserid());
-		return user;
+	public boolean update(String userid, String password, String password_repe) {
+		if(password.equals(password_repe)) {
+			userRepository.updateByUserId(password, userid);
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	

@@ -9,6 +9,6 @@ public interface UserService {
 	
 	public UserData register(UserData usuario);
 	
-	public UserData update(UserData user);
+	public boolean update(String userid,String password,String password_repe);
 
 }

@@ -8,32 +8,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function validateForm() {
     try {
-        var inputValue1 = document.getElementById("input1").value;
-        var inputValue2 = document.getElementById("input2").value;
-		var inputValue3 = document.getElementById("input3").value;
-        var inputValue4 = document.getElementById("input4").value;
-		var inputValue5 = document.getElementById("input5").value;	
-		var inputValue6 = document.getElementById("input6").value;	
-        const data = { userid: inputValue1, password: inputValue2, email: inputValue3, phone: inputValue4, favourite_team: inputValue5, favourite_player: inputValue6};
-        const address = '/api/users/update';
-        fetch(address, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-            })
-            .then(response => {
-         		response.json();
-          		console.log(response.status);
-          		if(response.status == 200){
-            		console.log("Authenticated");
-            		alert("Registrado Correctamente");
-            		document.location.href="index.html";
-          		} else {
-            	alert("Usuario y contraseña no valido");
-          }
-        })
+        var user = document.getElementById("input1").value;
+        var password_nueva = document.getElementById("input2").value;
+		var password_repeticion = document.getElementById("input3").value;
+		if(password_nueva==password_repeticion){
+		    fetch(`http://localhost:8080/api/users/update?userid=${document.getElementById("input1").value}&password=${document.getElementById("input2").value}&password_repe=${document.getElementById("input3").value}`,{
+			  headers:{
+			   'Content-type' : 'application/json',
+			    'Accept': 'application/json',
+			  },
+			  method: 'PUT'})
+			      .then(res => {
+			      if(res.ok){
+					 document.location.href="home.html";
+					 alert('Password Changed');
+			      }
+			    })
+	            
+	        }else{
+	        	alert('New passwords do not match');
+	        }
 
     } catch (err) {
         console.error(err.message);
