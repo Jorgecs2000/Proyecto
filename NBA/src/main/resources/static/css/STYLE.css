@@ -21,3 +21,12 @@
 	display:flex;
 	justify-content: center;
 }
+.imagen
+{
+  	height: 900px;
+  	/*IMPORTANTE*/
+ 	 display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+

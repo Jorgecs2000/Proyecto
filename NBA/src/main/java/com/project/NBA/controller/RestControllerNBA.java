@@ -1,5 +1,7 @@
 package com.project.NBA.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.NBA.model.Contact;
+import com.project.NBA.model.Player;
 import com.project.NBA.model.PlayerSearch;
 import com.project.NBA.model.Quinteto;
 import com.project.NBA.service.NBAservice;
@@ -46,6 +49,7 @@ public class RestControllerNBA {
 		return new ResponseEntity<>(model, HttpStatus.OK);
 
 	}
+	
 
 	
 
@@ -81,6 +85,12 @@ public class RestControllerNBA {
 			return new ResponseEntity<Quinteto>(HttpStatus.BAD_REQUEST);
 		}
 		
+	}
+	
+	@GetMapping("/jugadores")
+	public ResponseEntity<List<Player>> getAllPlayers(){
+		List<Player> players = nba.buscarTodosJugadores();
+		return new ResponseEntity<>(players,HttpStatus.OK);
 	}
 	
 	

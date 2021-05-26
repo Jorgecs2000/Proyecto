@@ -1,5 +1,9 @@
 package com.project.NBA.service.impl;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -43,6 +47,19 @@ public class PlayerService implements NBAservice {
 		Quinteto quinteto = new Quinteto(p1,p2,p3,p4,p5);
 		
 		return quinteto;
+	}
+	
+	@Override
+	public List<Player> buscarTodosJugadores() {		
+		Iterable<Player> players = pRepository.findAll();
+		ArrayList<Player> pList = new ArrayList<>();
+		Iterator<Player> it =players.iterator();
+		
+		while(it.hasNext()) {
+			Player p = it.next();
+			pList.add(p);
+		}
+		return pList;
 	}
 
 }
