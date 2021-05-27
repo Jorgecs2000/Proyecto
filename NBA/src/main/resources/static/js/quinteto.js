@@ -29,7 +29,7 @@ function validateForm() {
 	})
 	.catch(e => {
 		console.error("Error " + e)
-		alert('Introduzca 5 jugadores');
+		alert('Introduzca 5 jugadores, alguno de los apellidos puede que no esté en la base de datos');
 	})
 	return false;
 

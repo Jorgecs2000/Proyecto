@@ -68,4 +68,9 @@ public class PlayerService implements NBAservice {
 		return player;
 	}
 
+	@Override
+	public void deleteByLName(String last_name) {
+		pRepository.deleteByLastName(last_name);
+	}
+
 }

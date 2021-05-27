@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>prueba</title>
+<title>Insert title here</title><meta charset="ISO-8859-1">
+	<meta name="autor" content="Jorge Calvo Soria">
+	<title>PRAC2</title>
+  <link rel="stylesheet" type="text/css" href="./css/STYLE.css" media="screen" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<div class="container">
+	<header class="NBA-header py-4" id="TOP">
+	<div class ="row header flex no-wrap justify-content-between align-items-center">
+	  <div class="col-12 text-center">
+	  	<image src="https://www.pinclipart.com/picdir/big/522-5223756_nba-logo-white-png-clipart.png" width="200" heigth="100" align=top> </image>
+	  </div>
+	</div>
+	</header>
+	<div>
+	<a><b>Introduzca el apellido del jugador que desea borrar</b></a>
+		 <form class="needs-validation" name="register" id= "myform">
+		  	<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="base" id="input1" type="text" class="form-control" placeholder="last_name">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	<div >
+               <button type="submit">Delete</button>
+               <a href="/creadorQuintetos.html">Creador Quinteto</a>
+             </div>   
+                      
+	 	</form>
+ 	 </div>
+	<script type="text/javascript" src="./js/deletePlayerView.js"></script>
+	<div> <h2 id="Player"></h2></div>
+	
+	<!--FOOTER-->
+	<footer class="text-muted py-4">
+	  <div class="container">
+	    <p class="float-end mb-1">
+	      <a href="home.html">Back to home</a>
+	    </p>
+	    <p class="mb-1">Proyecto final</p>
+	    <p class="mb-1">BY: Jorge Calvo Soria Y Javier Álvarez Martínez 3A GITT</p>
+	  </div>
+	</footer>
 </body>
 </html>

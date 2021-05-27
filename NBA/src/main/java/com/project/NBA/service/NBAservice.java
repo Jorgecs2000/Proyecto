@@ -15,5 +15,7 @@ public interface NBAservice {
 	List<Player> buscarTodosJugadores();
 
 	public Player addNewPlayer(Player player);
+	
+	public void deleteByLName(String last_name);
 
 }
