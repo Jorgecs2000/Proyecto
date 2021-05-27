@@ -6,12 +6,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		return validateForm();
 	});
 });
-//
-//
+
 function validateForm() {
     try {
         var inputValue1 = document.getElementById("input1").value;
         var inputValue2 = document.getElementById("input2").value;
+        let usuario={
+        	user: inputValue1,
+        	password: inputValue2
+        };
+        localStorage.setItem("usuario",JSON.stringify(usuario));
+        
         const data = { user: inputValue1, password: inputValue2 };
         const address = 'api/users/login';
         fetch(address, {
