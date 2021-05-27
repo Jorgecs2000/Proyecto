@@ -18,45 +18,63 @@
 	  </div>
 	</div>
 	</header>
-      <div class="register text center">
+	<div>
+	<a><b>Introduzca los datos del jugador que desea añadir</b></a>
 		 <form class="needs-validation" name="register" id= "myform">
 		  	<div class= "row">
 		  	 <div class="form-group col-lg-6">
-		  	 			<a>Introduzca la contraseña actual</a>
                         <div class="input-group">
                         <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                        <input name="passwordact" id="input1" type="passwordact" class="form-control" placeholder="Current Password">
+                        <input name="base" id="input1" type="text" class="form-control" placeholder="last_name">
                         </div>  
                         <span class="help-block" id="error"></span>                    
                    </div>
                             
                    <div class="form-group col-lg-6">
-                   		<a>introduzca la nueva contraseña</a>
                         <div class="input-group">
                         <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                        <input name="password"  id="input2" type="text" class="form-control" placeholder="Password">
-                        </div>  
-                        <span class="help-block" id="error"></span>                    
-                   </div>
-                   
-                   <div class="form-group col-lg-6">
-                   		<a>repita la nueva contraseña</a>
-                        <div class="input-group">
-                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                        <input name="password"  id="input3" type="text" class="form-control" placeholder="Password">
+                        <input name="base" id="input2" type="text" class="form-control" placeholder="name">
                         </div>  
                         <span class="help-block" id="error"></span>                    
                    </div>
 		  	</div>
+		  	<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="base" id="input3" type="text" class="form-control" placeholder="dorsal">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+                   <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="base" id="input4" type="text" class="form-control" placeholder="team">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+		  	</div>
+		  		<div class= "row">
+		  	 <div class="form-group col-lg-6">
+                        <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input name="base" id="input5" type="text" class="form-control" placeholder="media">
+                        </div>  
+                        <span class="help-block" id="error"></span>                    
+                   </div>
+                            
+   		  	</div>
 		  	<div >
-               <button type="submit">CHANGE</button>
-             </div>
+               <button type="submit">Create</button>
+               <a href="/creadorQuintetos.html">Creador Quinteto</a>
+             </div>            
 	 	</form>
  	 </div>
-  </div>
-<script type="text/javascript" src="./js/actualizarDatos.js"></script>
-
-<!--FOOTER-->
+	<script type="text/javascript" src="./js/newPlayerView.js"></script>
+	<div> <h2 id="Player"></h2></div>
+	
+	<!--FOOTER-->
 	<footer class="text-muted py-4">
 	  <div class="container">
 	    <p class="float-end mb-1">

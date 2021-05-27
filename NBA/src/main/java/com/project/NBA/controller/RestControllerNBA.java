@@ -62,7 +62,15 @@ public class RestControllerNBA {
 		return new ResponseEntity<>(players,HttpStatus.OK);
 	}
 	
-	
+	@PostMapping("/add")
+	public ResponseEntity<Player> addPlayer(@RequestBody Player player){
+		Player p = nba.addNewPlayer(player);
+		if(p!= null) {
+			return new ResponseEntity<Player>(p,HttpStatus.OK);
+		}else {
+			return new ResponseEntity<Player>(HttpStatus.BAD_REQUEST);
+		}
+	}
 	
 	
 }

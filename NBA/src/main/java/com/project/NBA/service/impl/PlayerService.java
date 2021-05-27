@@ -62,4 +62,10 @@ public class PlayerService implements NBAservice {
 		return pList;
 	}
 
+	@Override
+	public Player addNewPlayer(Player player) {
+		pRepository.save(player);
+		return player;
+	}
+
 }
