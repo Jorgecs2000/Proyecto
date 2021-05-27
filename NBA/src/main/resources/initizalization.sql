@@ -1,5 +1,5 @@
-DROP TABLE players;
-DROP TABLE userdatas;
+--DROP TABLE players;
+--DROP TABLE userdatas;
 
 CREATE TABLE IF NOT EXISTS userdatas ( 
 id INT AUTO_INCREMENT PRIMARY KEY,
