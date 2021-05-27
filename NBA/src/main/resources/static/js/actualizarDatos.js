@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 });
 
+//
 function validateForm() {
     try {
     	if(JSON.parse(localStorage.getItem("usuario")))
