@@ -75,5 +75,12 @@ public class UserController {
 		
 		
 	}
+	
+	@PutMapping("/update/all")
+public ResponseEntity<UserData> actualizarAll(@RequestParam("userid") String userid, @RequestParam("email") String email, @RequestParam("phone") String phone,@RequestParam("favourite_team") String team,@RequestParam("favourite_player") String player){
 		
+		boolean r =userService.updateAll(userid,email,phone,team,player);
+		return new ResponseEntity<UserData>(HttpStatus.OK);
+		
+	}	
 }

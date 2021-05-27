@@ -12,5 +12,6 @@ public interface UserService {
 	public boolean update(String userid,String password,String password_repe);
 
 	public UserData getUser(String user);
-//
+	
+	public boolean updateAll(String userid,String email,String phone,String team,String player);
 }
