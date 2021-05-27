@@ -21,7 +21,6 @@ function validateForm() {
 		console.log(res);
 		if(res.ok){
 			alert('Borrado correcto');
-			document.location.href="home.html";
 		}else{
 			alert('no se ha podido borrar al jugador');
 		}

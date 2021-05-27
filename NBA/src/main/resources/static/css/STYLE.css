@@ -29,4 +29,14 @@
   	justify-content: center;
   	align-items: center;
 }
+.imagenusuario
+{
+  	height: 1em;
+  	width: 120em;
+  	/*IMPORTANTE*/
+ 	 display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
 
