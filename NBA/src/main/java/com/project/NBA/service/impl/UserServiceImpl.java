@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
 		return usuario;
 		
 	}
-
+//
 	@Override
 	public boolean update(String userid, String password, String password_repe) {
 		if(password.equals(password_repe)) {
@@ -46,6 +46,12 @@ public class UserServiceImpl implements UserService {
 		}else {
 			return false;
 		}
+	}
+
+	@Override
+	public UserData getUser(String userid) {
+		UserData u= userRepository.findByUserid(userid);
+		return u;
 	}
 	
 	

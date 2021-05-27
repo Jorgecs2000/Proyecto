@@ -11,4 +11,6 @@ public interface UserService {
 	
 	public boolean update(String userid,String password,String password_repe);
 
+	public UserData getUser(String user);
+//
 }
