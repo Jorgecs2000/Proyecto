@@ -14,6 +14,6 @@ public interface NBAservice {
 
 	List<Player> buscarTodosJugadores();
 
-	
+	public Player addNewPlayer(Player player);
 
 }
