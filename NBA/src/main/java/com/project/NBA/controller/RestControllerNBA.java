@@ -17,12 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.NBA.model.Contact;
 import com.project.NBA.model.Player;
 import com.project.NBA.model.PlayerSearch;
 import com.project.NBA.model.Quinteto;
 import com.project.NBA.service.NBAservice;
-import com.project.NBA.service.impl.ContactService;
 
 
 @CrossOrigin(origins="null")
@@ -34,11 +32,6 @@ public class RestControllerNBA {
 	private NBAservice nba;
 	
 	
-	@GetMapping("/helloworld")
-	public String helloworld() {
-		return"{\"message\":\"Hola mundo\"}";
-	}
-	
 	@GetMapping("/home/players")
 	public ResponseEntity<PlayerSearch> players(@RequestParam("player") String player) {
 
@@ -49,31 +42,7 @@ public class RestControllerNBA {
 		return new ResponseEntity<>(model, HttpStatus.OK);
 
 	}
-	
-
-	
-
-	
-	@PostMapping(path = "/contact")
-    public ResponseEntity<String> contact(
-            @Valid @RequestBody Contact contacto,
-            BindingResult bindingResult) {
-
-        if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>("{\"result\" : \"KO\"}", HttpStatus.BAD_REQUEST);
-        }
-
-        for(Contact c: ContactService.getContacts())
-        {
-            if((c.getEmail().equals(contacto.getEmail())))
-            {
-                return new ResponseEntity<>("{\"result\" : \"OK\"}", HttpStatus.OK);
-            }
-        }
-        return new ResponseEntity<>("{\"result\" : \"KO\"}", HttpStatus.UNAUTHORIZED);
-    }
-	
-	
+		
 	@GetMapping("/quinteto")
 	public ResponseEntity<Quinteto> search(@RequestParam("player1") String player1, @RequestParam("player2") String player2, @RequestParam("player3") String player3, 
 														@RequestParam("player4") String player4, @RequestParam("player5") String player5){

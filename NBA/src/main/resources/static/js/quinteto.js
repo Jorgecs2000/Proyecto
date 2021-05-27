@@ -29,6 +29,7 @@ function validateForm() {
 	})
 	.catch(e => {
 		console.error("Error " + e)
+		alert('Introduzca 5 jugadores');
 	})
 	return false;
 
